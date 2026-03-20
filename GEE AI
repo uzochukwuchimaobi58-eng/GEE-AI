@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<title>Smart Tech Guide PRO</title>
+
+<style>
+
+body{
+margin:0;
+font-family:Arial;
+background:#0a0f1c;
+color:white;
+}
+
+nav{
+background:#111827;
+padding:10px;
+display:flex;
+flex-wrap:wrap;
+gap:10px;
+}
+
+nav a{
+background:#1f2937;
+padding:8px 12px;
+border-radius:8px;
+cursor:pointer;
+}
+
+nav a:hover{
+background:#2563eb;
+}
+
+section{
+display:none;
+padding:30px;
+}
+
+.active{
+display:block;
+}
+
+.card{
+background:#111827;
+padding:20px;
+margin:10px;
+border-radius:10px;
+}
+
+button{
+padding:10px 15px;
+background:#2563eb;
+color:white;
+border:none;
+border-radius:8px;
+}
+
+input{
+padding:10px;
+margin:5px;
+}
+
+.lock{
+opacity:0.5;
+}
+
+</style>
+
+</head>
+<body>
+
+
+<nav>
+
+<a onclick="show('home')">Home</a>
+<a onclick="show('blog')">Blog</a>
+<a onclick="show('tools')">AI Tools</a>
+<a onclick="show('pricing')">Pricing</a>
+<a onclick="show('login')">Login</a>
+<a onclick="show('signup')">Signup</a>
+<a onclick="show('dashboard')">Dashboard</a>
+<a onclick="show('templates')">Templates</a>
+<a onclick="show('download')">Download</a>
+<a onclick="show('contact')">Contact</a>
+<a onclick="show('about')">About</a>
+
+</nav>
+
+
+<section id="home" class="active">
+<h1>Smart Tech Guide PRO</h1>
+<p>AI Tools Website 2026</p>
+</section>
+
+
+
+<section id="blog">
+<h1>Blog</h1>
+
+<div class="card">
+Best AI tools 2026
+</div>
+
+<div class="card">
+How to make money with AI
+</div>
+
+</section>
+
+
+
+<section id="tools">
+<h1>AI Tools</h1>
+
+<div class="card">
+Free AI Writer
+</div>
+
+<div class="card lock">
+Premium AI Video Generator 🔒
+</div>
+
+<div class="card lock">
+Premium AI Image Generator 🔒
+</div>
+
+</section>
+
+
+
+<section id="pricing">
+
+<h1>Pricing</h1>
+
+<div class="card">
+Free Plan
+</div>
+
+<div class="card">
+Pro Plan - $5
+
+<br><br>
+
+<button onclick="unlock()">
+Buy / Unlock
+</button>
+
+</div>
+
+</section>
+
+
+
+<section id="login">
+
+<h1>Login</h1>
+
+<input placeholder="Email">
+<input placeholder="Password">
+
+<br>
+
+<button onclick="login()">
+Login
+</button>
+
+</section>
+
+
+
+<section id="signup">
+
+<h1>Signup</h1>
+
+<input placeholder="Email">
+<input placeholder="Password">
+
+<br>
+
+<button onclick="signup()">
+Signup
+</button>
+
+</section>
+
+
+
+<section id="dashboard">
+
+<h1>Dashboard</h1>
+
+<p id="status">
+Not premium
+</p>
+
+</section>
+
+
+
+<section id="templates">
+
+<h1>Templates</h1>
+
+<div class="card">
+Website Template
+</div>
+
+<div class="card lock">
+Premium Template 🔒
+</div>
+
+</section>
+
+
+
+<section id="download">
+
+<h1>Download</h1>
+
+<div class="card">
+Download AI App
+</div>
+
+</section>
+
+
+
+<section id="contact">
+
+<h1>Contact</h1>
+
+<p>smarttech@gmail.com</p>
+
+</section>
+
+
+
+<section id="about">
+
+<h1>About</h1>
+
+<p>Smart Tech Guide PRO AI website</p>
+
+</section>
+
+
+
+<script>
+
+let premium=false
+
+function show(id){
+
+document.querySelectorAll("section")
+.forEach(s=>s.classList.remove("active"))
+
+document.getElementById(id)
+.classList.add("active")
+
+}
+
+
+function unlock(){
+
+premium=true
+
+alert("Premium Unlocked")
+
+document.getElementById("status").innerText="Premium user"
+
+document.querySelectorAll(".lock")
+.forEach(e=>e.style.opacity=1)
+
+}
+
+
+function login(){
+
+alert("Login success")
+
+}
+
+
+function signup(){
+
+alert("Signup success")
+
+}
+
+</script>
+
+
+</body>
+</html>

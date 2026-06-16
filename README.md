@@ -11,7 +11,7 @@ I bridge the gap between AI-driven software development and high-converting e-co
 * **Growth Strategy**: Traffic arbitrage models and conversion rate optimization.
 
 ### 🚀 Projects
-
+S
 * **GEE-AI**: An AI content generation suite for automated video and audio creation.
 ### Firebase backend setup 
 i will set and register your app on firebase console 
